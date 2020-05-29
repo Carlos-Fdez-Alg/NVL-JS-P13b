@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Práctica con JS</title>
+  </head>
+  <body>
+    <h1>Vamos a practicar con el ámbito de las variables</h1>
+    <script type="application/javascript">
+      function palindromo (palabra) {
+        var palind = true;
+        var palMin = palabra.toLowerCase();
+        var len = palabra.length;
+        for (var i = 0; i < len; i++){
+          if (palMin[i] !== palMin[(len - 1) - i]){
+            palind = false;
+          }
+        }
+        return palind;
+      }
+      console.log('"Ana" es palíndromo: '+ palindromo('Ana'));
+      console.log('"Palindromo" es palíndromo:'+ palindromo('Palindromo'));
+      console.log('"reconocer" es palíndromo: '+ palindromo('reconocer'));
+    </script>
+  </body>
+</html>
